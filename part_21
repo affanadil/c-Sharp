@@ -1,0 +1,40 @@
+using System;
+
+namespace NEW
+{
+    public class Employee
+    {
+        public string FirstName;
+        public string LastName;
+        public string Email;
+        public void PrintFullName()
+        {
+
+        }
+    }
+    public class FullTimeEmployee : Employee
+    {
+       public float YearlySalary;
+    }
+    public class PartTimeEmployee : Employee
+    {
+        public float Hourlyrate;
+    }
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            FullTimeEmployee fte = new FullTimeEmployee();
+            fte.FirstName = "Affan";
+            fte.LastName = "Adil";
+            fte.YearlySalary= 50000000;
+            fte.PrintFullName();
+
+            PartTimeEmployee pte = new PartTimeEmployee();
+            pte.FirstName = "aa";
+            pte.LastName = "bb";
+            pte.Hourlyrate = 50 ;
+            pte.PrintFullName();
+        }
+    }
+}
