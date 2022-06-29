@@ -1,40 +1,53 @@
 using System;
-
-namespace NEW
+namespace Revision
 {
-    public class Employee
+    public class circle
     {
-        public string FirstName;
-        public string LastName;
-        public string Email;
-        public void PrintFullName()
-        {
 
+        public static float _pi;
+        int _radius;
+        static circle()
+            
+        {
+            Console.WriteLine("Static method called");
+            circle._pi = 3.141F;
+            
         }
-    }
-    public class FullTimeEmployee : Employee
-    {
-       public float YearlySalary;
-    }
-    public class PartTimeEmployee : Employee
-    {
-        public float Hourlyrate;
+        public circle(int radius)
+
+        {
+            Console.WriteLine("instance method called");
+            this._radius = radius;
+        }
+        public static void print()
+            {
+            //
+            }
+        public float calculate_area()
+        {
+            return circle._pi * this._radius * this._radius;
+        }
     }
     public class Program
     {
-        public static void Main(string[] args)
-        {
-            FullTimeEmployee fte = new FullTimeEmployee();
-            fte.FirstName = "Affan";
-            fte.LastName = "Adil";
-            fte.YearlySalary= 50000000;
-            fte.PrintFullName();
 
-            PartTimeEmployee pte = new PartTimeEmployee();
-            pte.FirstName = "aa";
-            pte.LastName = "bb";
-            pte.Hourlyrate = 50 ;
-            pte.PrintFullName();
+        public static void Main()
+
+        {
+            /* circle c1 = new circle(5);
+             float area = c1.calculate_area();
+             Console.WriteLine("Area = {0}",area);
+
+             circle c2 = new circle(6);
+             float area2 = c2.calculate_area();
+             Console.WriteLine("Area = {0}", area2);*/
+
+            Console.WriteLine(circle._pi);
         }
+     
+    
+    
+    
+
     }
 }
